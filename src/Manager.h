@@ -14,7 +14,12 @@ class Manager: public Employee {
 public:
 	Manager(std::string name, float payrate, int bonusmult);
 	virtual ~Manager();
-	float pay(float hoursWorked);
+
+	//if function this overrides is virtual then
+	//this function is also virtual
+	//as a courtesy to future developers
+	//add the word virtual here anyway
+	virtual float pay(float hoursWorked);
 protected:
 	int bonusmult;
 };

@@ -14,7 +14,11 @@ public:
 	Employee(std::string name, float payrate);
 	std::string getName() const;
 
-	float pay(float hoursWorked);
+	//make the following call virtual to get correct behaviour when
+	//manipulating derived classes from base class pointer
+	virtual float pay(float hoursWorked);
+
+	//destructors should always be virtual
 	virtual ~Employee(){};
 protected:
 	std::string name;
